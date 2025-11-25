@@ -1,0 +1,51 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@700&display=swap');
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+:root {
+  --brutalist-black: #000000;
+  --brutalist-white: #FFFFFF;
+  --brutalist-grey: #808080;
+  --brutalist-border: 4px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--brutalist-white);
+}
+
+/* Brutalist scroll snap */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Remove all default button styles */
+button {
+  all: unset;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hard edges everywhere */
+* {
+  border-radius: 0 !important;
+}
